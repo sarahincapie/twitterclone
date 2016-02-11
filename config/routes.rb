@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
-  get 'statuses/index'
+  #get 'statuses/index'
 
-  get 'statuses/show'
+get 'statuses', to: 'statuses#index', page: 1
 
-  get 'statuses/new'
+get 'statuses/page/:page', to: 'statuses#index'
+
+get 'statuses/show'
+
+get 'statuses/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
