@@ -1,5 +1,5 @@
-
-
+<%= link_to 'previous page', page: @page -1 %>
+<%= link_to 'next page', page: @page + 1 %>
 
 <% @statuses.each do |s| %>
 <%= div_for s do %>
